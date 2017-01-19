@@ -1,0 +1,23 @@
+<div ng-controller="invokeLambdaStageCtrl as invokeLambdaCtrl" class="form-horizontal">
+  <stage-config-field label="Account">
+    <input type="text"
+           class="form-control input-sm"
+           ng-model="stage.account"
+           required/>
+  </stage-config-field>
+  <stage-config-field label="Region">
+    <input type="text"
+           class="form-control input-sm"
+           ng-model="stage.region"
+           required/>
+  </stage-config-field>
+  <stage-config-field label="Function Name">
+    <input type="text"
+           class="form-control input-sm"
+           ng-model="stage.functionName"
+           required/>
+  </stage-config-field>
+  <stage-config-field label="Context">
+    <map-editor model="stage.functionContext" allow-empty="true"></map-editor>
+  </stage-config-field>
+</div>
