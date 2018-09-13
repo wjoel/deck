@@ -108,6 +108,7 @@ module(KUBERNETES_V1_MODULE, [
       'deployManifest',
       'deleteManifest',
       'undoRolloutManifest',
+      'findManifestFromCluster',
       'findArtifactsFromResource',
       'bakeManifest',
       'patchManifest',

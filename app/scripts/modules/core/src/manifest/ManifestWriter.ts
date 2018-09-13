@@ -75,6 +75,16 @@ export class ManifestWriter {
     });
   }
 
+  public static findManifestFromCluster(command: any, application: Application): IPromise<ITask> {
+    const description = 'Retrieves a manifest from a Kubernetes cluster';
+    command.type = 'findManifestFromCluster';
+    return TaskExecutor.executeTask({
+      job: [command],
+      application,
+      description,
+    });
+  }
+
   public static findArtifactsFromResource(command: any, application: Application): IPromise<ITask> {
     const description = 'Find artifacts from a Kubernetes resource';
     command.type = 'findArtifactsFromResource';
